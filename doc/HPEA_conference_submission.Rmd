@@ -1,0 +1,21 @@
+## Demonstration title
+Reproducible Data Visualization in R and Rstudio
+
+
+
+## Abstract
+Evaluators work with data and make visualizations to support their claims. These visualizations may be used in a number of mediums (e.g., reports and presentations). Additionally, the same type of visualization may be used in other projects. In this session, I demonstrate how R and Rstudio can be used to create reproducible visualizations that can be used across mediums and across projects. Participants are encouraged to install R and Rstudio, as well as the ggplot2, rmarkdown, and knitr packages. Instructions for installing R, Rstudio, and R packages can be found at http://go.hawaii.edu/wKf.
+
+
+
+## Demonstration description
+
+This is a demonstration
+
+When working on projects, it is important to be able to show stakeholders a visualization of the data, both as the project progresses and at the end of the project and often in a variety of mediums such as presentation slides and written reports. Approaches to creating visualizations that are not programmatic (i.e., do not use computer code) require that a visualization be manually edited to account for differing constraints in different mediums. For example, a nice color scheme on a visualization in a presentation may have to be modified to be viewable when printing in grayscale. This is time consuming when making visualizations "by hand" in traditional computer programs such as Excel due to the amount of manual edits.
+
+Additionally, visualization types can be used across projects to highlight similar claims about similarly structured data. For example, scatterplots can be used to show the relationship between interval-level measures in a wide variety of contexts. Again, using traditional computer programs might require that the same scatterplot be created from scratch each time it is used. In other words, when you make an excellent plot that scores full points on Evergreen and Emery's (2016) Data Visualization Checklist, you might want to be able to reuse it in different contexts.
+
+R, Rstudio, ggplot2, rmarkdown, and knitr are tools that can be used to create reusable visualizations and reproducible reports.
+
+In this demonstration, I show how R and Rstudio can be used to create visualizations that can be reproduced for different mediums. This demonstration has two stages. In the first stage, I focus on visualizing data for three different purposes: 1) to make comparisons, 2) to examine relationships, and 3) to show change over time. I demonstrate how to build each of these types of visualizations in R using ggplot2 in order to ensure that the text, color, points, lines, and arrangement satisfy the requirements of best practice. In the second stage, I demonstrate how to use R and Rstudio to create reproducible reports.
