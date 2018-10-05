@@ -1,0 +1,46 @@
+---
+title: "Untitled"
+author: "Geoffrey T. LaFlair"
+date: "10/4/2018"
+output: powerpoint_presentation
+---
+
+```{r setup, include = FALSE}
+
+# Set up chunk options
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, tidy = TRUE, tidy.opts = list(comment = FALSE))
+
+library(papaja)
+library(knitr)
+library(dplyr)
+
+here::here('R/demo.R') %>%
+  read_chunk(.)
+
+```
+
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+

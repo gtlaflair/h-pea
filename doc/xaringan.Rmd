@@ -1,0 +1,54 @@
+---
+title: "Your Presentation's title"
+subtitle: "Your presentation's subtitle"
+author: "Your name"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["metropolis", "metropolis-fonts"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include = FALSE}
+
+# Set up chunk options
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, tidy = TRUE, tidy.opts = list(comment = FALSE))
+
+library(papaja)
+library(knitr)
+library(dplyr)
+library(RefManageR)
+
+BibOptions(check.entries = FALSE, 
+           bib.style = "authoryear", 
+           cite.style = 'authoryear',
+           first.inits = TRUE,
+           style = "markdown",
+           hyperlink = FALSE, 
+           dashed = FALSE)
+myBib <- ReadBib("r-references.bib", check = FALSE)
+
+here::here('R/demo.R') %>%
+  read_chunk(.)
+
+```
+
+# References
+
+```{r, 'refs', results='asis', echo=FALSE}
+NoCite(myBib, "*")
+PrintBibliography(myBib, start = 1, end = 7)
+```
+
+---
+
+# References
+
+```{r, 'refs-2', results='asis', echo=FALSE}
+NoCite(myBib, "*")
+PrintBibliography(myBib, start = 8, end = 12)
+```

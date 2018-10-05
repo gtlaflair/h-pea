@@ -1,6 +1,6 @@
 ## About the Demonstration
 
-Most of this demonstration will be me live coding and explaining how ggplot works. The questions I intend to answer and the objectives I intend to complete during the demonstration are below. Packages that I will be using in this demo include the packages in the `tidyverse` ecosystem (e.g., `ggplot2`, `dplyr`, `readr`) and Thomas Pedersen's `patchwork` package. Maybe if there is time, I will make some dumbell or lollipop plots using Bob Rudis' `ggalt` package. Another useful package for working with `ggplot2` is the `ggthemes` package by Jeffrey Arnold, which contains functions for extra theme options.
+Most of this demonstration will be me live coding and explaining how ggplot works. The questions I intend to answer and the objectives I intend to complete during the demonstration are below. Packages that I will be using in this demo include the packages in the `tidyverse` ecosystem (e.g., `ggplot2`, `dplyr`, `readr`) and Thomas Pedersen's `patchwork` package. Maybe if there is time, I will make some dumbell or lollipop plots using Bob Rudis' `ggalt` package. Another useful package for working with `ggplot2` is the `ggthemes` package by Jeffrey Arnold, which contains functions for extra theme options. Other packages that are used for creating slide decks and reports are `xaringan`, `papaja`, and `knitr`. The `here` package is used to solve working directory issues.
 
 You can watch (and copy & paste) the live coding at three different locations depending on what is being covered:
 
