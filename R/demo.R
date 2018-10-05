@@ -56,10 +56,11 @@ percent_items <- int_plot %>%
   filter(items_owned_logical) %>%
   # count the items by village; this creates the n variable
   count(items, village) %>%
-  ## add a column with the number of people in each village
+  # add a column with the number of people in each village
   mutate(people_in_village = case_when(village == "Chirodzo" ~ 39,
                                        village == "God" ~ 43,
                                        village == "Ruaca" ~ 49)) %>%
+  # make a percentage column
   mutate(percent = n / people_in_village)
 
 # add themes
