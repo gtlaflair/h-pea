@@ -7,13 +7,19 @@ library(tidyr)
 library(tibble)
 library(patchwork)
 
-## @knitr readdata 
+## @knitr readdata
+
 int_plot <- read_csv('https://raw.githubusercontent.com/gtlaflair/h-pea/master/data_output/interviews_plotting.csv')
+
 
 ## @knitr knowdata
 
 # show head(), tail(), glimpse(), str(), nrow(), ncol(), names(), View()
 
+# head(int_plot)
+# tail(int_plot)
+# glimpse(int_plot)
+# View(int_plot)
 
 ## @knitr boxplots
 
@@ -21,13 +27,28 @@ int_plot <- read_csv('https://raw.githubusercontent.com/gtlaflair/h-pea/master/d
 # x = respondent_wall_type, y = rooms
 # add jitter, width = .20, alpha = .60
 
+box <- ggplot(data = int_plot, aes(x = respondent_wall_type,
+                                   y = rooms)) +
+  geom_boxplot() +
+  geom_jitter(width = .20, alpha = .60)
+
 
 ## @knitr scatterplots
 
 # name the plot scatter
-# x = no_members, y = number_items
+# x = no_membrs, y = number_items
 # start with geom_point()
 # iteratively add geom_jitter(alpha = 0.5, aes(color = village))
+
+scatter <- ggplot(int_plot, aes(x = no_membrs, 
+                                y = number_items,
+                                color = village)) +
+  geom_point() +
+  geom_jitter(alpha = .5) +
+  ylab("Number of Items") +
+  xlab("Number of People in Family") +
+  ggtitle("Number of Items by People") +
+  scale_color_viridis_d(option = 'inferno')
 
 ## @knitr barplots
 
@@ -35,12 +56,26 @@ int_plot <- read_csv('https://raw.githubusercontent.com/gtlaflair/h-pea/master/d
 # use var respondent_wall_type for x, fill, and color; add scale_fill_v & scale_color_v
 # add theme(legend.position = 'none')
 
-
+bar <- ggplot(int_plot, aes(x = respondent_wall_type, 
+                            fill = respondent_wall_type,
+                            color = respondent_wall_type)) +
+  geom_bar() +
+  scale_color_viridis_d() +
+  scale_fill_viridis_d()
+bar
 ## @knitr faceting
 
 # facet by village
 # x = respondent_wall_type, fill = respondent_wall_type
 # add dodge to second plot, proportions to third, use viridis for all
+
+bar_vil <- ggplot(int_plot, aes(x = respondent_wall_type, 
+                                fill = respondent_wall_type,
+                                color = respondent_wall_type)) +
+  geom_bar() +
+  scale_color_viridis_d() +
+  scale_fill_viridis_d() +
+  facet_wrap(~ village)
 
 # show proportions
 # filter(respondent_wall_type != "cement") %>%
@@ -68,10 +103,10 @@ percent_items <- int_plot %>%
 # add themes
 
 # show theme_minimal first
-# theme_evergreen_s <- theme_minimal() + theme(axis.ticks = element_blank(),
-#                                              panel.grid = element_blank())
+theme_evergreen_s <- theme_minimal() + theme(axis.ticks = element_blank(),
+                                             panel.grid = element_blank())
 
-# theme_set(theme_evergreen_s)
+theme_set(theme_evergreen_s)
 
 ## @knitr timeseries
 

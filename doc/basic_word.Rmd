@@ -36,6 +36,8 @@ here::here('R/demo.R') %>%
 
 ## Results
 
+The result show something awesome and meaningful!
+
 ```{r}
 <<loadps>>
 
