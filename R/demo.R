@@ -3,6 +3,8 @@
 library(ggplot2)
 library(readr)
 library(dplyr)
+library(tidyr)
+library(tibble)
 library(patchwork)
 
 ## @knitr readdata 
@@ -70,3 +72,15 @@ percent_items <- int_plot %>%
 #                                              panel.grid = element_blank())
 
 # theme_set(theme_evergreen_s)
+
+## @knitr timeseries
+
+# air <- economics %>%
+#   ggplot(., aes(x = date, y = pop)) +
+#   geom_line()
+# 
+# air_two <- economics %>%
+#   select(date, psavert, uempmed) %>%
+#   gather(key, value, -date) %>%
+#   ggplot(., aes(x = date, y = value, color = key)) +
+#   geom_line()

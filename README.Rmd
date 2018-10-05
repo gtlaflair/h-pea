@@ -6,9 +6,9 @@ You can install some of the packages using this command: `install.packages(c('ti
 
 You can watch (and copy & paste) the live coding at three different locations depending on what is being covered:
 
-- [Basics of ggplot & making plots]() <>
-- [Creating slide decks that embed plots]() <>
-- [Creating reports that embed plots]() <>
+- [Basics of ggplot & making plots](http://ca.storyboards.jp/a/8b0uz8) <http://ca.storyboards.jp/a/8b0uz8>
+- [Creating slide decks that embed plots](http://ca.storyboards.jp/a/d8x8k1) <http://ca.storyboards.jp/a/d8x8k1>
+- [Creating reports that embed plots](http://ca.storyboards.jp/a/9ukdtq) <http://ca.storyboards.jp/a/9ukdtq>
 
 
 
