@@ -1,16 +1,8 @@
 ---
-title: "Your Presentation's title"
-subtitle: "Your presentation's subtitle"
+title: "Word Document"
 author: "Your name"
-date: "`r Sys.Date()`"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    css: ["metropolis", "metropolis-fonts"]
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
+date: "10/4/2018"
+output: word_document
 ---
 
 ```{r setup, include = FALSE}
@@ -36,18 +28,28 @@ here::here('R/demo.R') %>%
 
 ```
 
-# References
+## Introduction
 
-```{r, 'refs', results='asis', echo=FALSE}
-NoCite(myBib, "*")
-PrintBibliography(myBib, start = 1, end = 7)
+## Method
+
+`r Citet(myBib)`
+
+## Results
+
+```{r}
+<<loadps>>
+
+<<readdata>>
 ```
 
----
+```{r barplots}
 
-# References
+```
 
-```{r, 'refs-2', results='asis', echo=FALSE}
-NoCite(myBib, "*")
-PrintBibliography(myBib, start = 8, end = 12)
+## Discussion
+
+## References
+
+```{r, results='asis'}
+PrintBibliography(myBib)
 ```
