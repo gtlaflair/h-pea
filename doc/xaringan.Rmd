@@ -36,6 +36,29 @@ here::here('R/demo.R') %>%
 
 ```
 
+# Read data
+
+```{r}
+<<loadps>>
+
+<<readdata>>
+
+<<knowdata>>
+```
+
+---
+
+# Barplot
+
+```{r barplots}
+
+```
+
+???
+- My interpretation of barplot
+
+---
+
 # References
 
 ```{r, 'refs', results='asis', echo=FALSE}

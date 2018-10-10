@@ -42,6 +42,8 @@ The result show something awesome and meaningful!
 <<loadps>>
 
 <<readdata>>
+
+<<knowdata>>
 ```
 
 ```{r barplots}
@@ -49,6 +51,8 @@ The result show something awesome and meaningful!
 ```
 
 ## Discussion
+
+This is my excellent interpretation of the results.
 
 ## References
 

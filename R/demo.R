@@ -16,7 +16,7 @@ int_plot <- read_csv('https://raw.githubusercontent.com/gtlaflair/h-pea/master/d
 
 # show head(), tail(), glimpse(), str(), nrow(), ncol(), names(), View()
 
-# head(int_plot)
+head(int_plot)
 # tail(int_plot)
 # glimpse(int_plot)
 # View(int_plot)
